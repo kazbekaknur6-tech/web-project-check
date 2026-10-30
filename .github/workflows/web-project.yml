@@ -1,5 +1,4 @@
-
-name: Web Project Check
+name: Web Project Automated Check
 
 on:
   push:
@@ -31,6 +30,9 @@ jobs:
             echo "CSS file not found"
             exit 1
           fi
+
+           - name: List repository files
+        run: ls -la
 
       - name: Finish
         run: echo "Project check completed"
